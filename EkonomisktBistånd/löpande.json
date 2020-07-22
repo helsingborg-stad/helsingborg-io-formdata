@@ -329,42 +329,42 @@
             "group": "Utgifter"
         },
         {
-            show: true,
-            questions: [
+            "show": true,
+            "questions": [
               {
-                color: 'light',
-                show: true,
-                checkboxDisableText: 'Nej',
-                checkboxEnableText: 'Ja',
-                type: 'conditionalTextField',
+                "color": "light",
+                "show": true,
+                "checkboxDisableText": "Nej",
+                "checkboxEnableText": "Ja",
+                "type": "conditionalTextField",
               },
             ],
-            banner: {
-              iconSrc: 'ICON_TELL',
+            "banner": {
+              "iconSrc": "ICON_TELL",
             },
-            description:
-              'Om du vill meddela oss något ytterligare du tror är relevant för din ansökan, kan du göra det här.',
-            theme: {
-              step: {
-                bg: '#FFAA9B',
-                text: {
-                  colors: {
-                    secondary: '#00213F',
-                    primary: '#00213F',
+            "description":
+              "Om du vill meddela oss något ytterligare du tror är relevant för din ansökan, kan du göra det här.",
+            "theme": {
+              "step": {
+                "bg": "#FFAA9B",
+                "text": {
+                  "colors": {
+                    "secondary": "#00213F",
+                    "primary": "#00213F",
                   },
                 },
               },
             },
-            id: 'extraMessageStep',
-            title: 'Är det något annat du vill att vi ska veta?',
-            actions: [
+            "id": "extraMessageStep",
+            "title": "Är det något annat du vill att vi ska veta?",
+            "actions": [
               {
-                type: 'next',
-                color: 'green',
-                label: 'Fortsätt',
+                "type": "next",
+                "color": "green",
+                "label": "Fortsätt",
               },
             ],
-            group: 'Övrigt',
+            "group": "Övrigt",
         },
         {
             "show": true,
