@@ -1,0 +1,62 @@
+{
+    "updatedAt": 1594812317233,
+    "createdAt": 1594812317233,
+    "steps": [
+        {
+            "questions": [
+                {
+                    "description": "first name",
+                    "id": "firstName",
+                    "label": "Förnamn",
+                    "type": "text"
+                },
+                {
+                    "description": "last name",
+                    "label": "Efternamn",
+                    "id": "lastName",
+                    "type": "text"
+                },
+                {
+                    "description": "personal number",
+                    "label": "Personnummer",
+                    "id": "personalNumber",
+                    "type": "number"
+                },
+                {
+                    "description": "telephone number",
+                    "label": "Telefon",
+                    "id": "telephone",
+                    "type": "number"
+                },
+                {
+                    "description": "email",
+                    "label": "Email",
+                    "id": "email",
+                    "type": "text"
+                },
+                {
+                    "description": "living situation",
+                    "label": "Boende",
+                    "id": "living",
+                    "type": "text"
+                }
+            ],
+            "icon": "ICON_TELL",
+            "description": "Fyll i info om vuxna familjemedlemmar som du bor tillsammans med",
+            "id": "familj",
+            "title": "Familjemedlem, vuxen",
+            "actions": [
+                {
+                    "type": "submit",
+                    "label": "Klar"
+                }
+            ],
+            "group": "Familj"
+        }
+    ],
+    "provider": "Familj",
+    "PK": "FORM#dc069a10-c68d-11ea-9984-cbb2e8b06538",
+    "description": "Add or edit information about family members",
+    "id": "dc069a10-c68d-11ea-9984-cbb2e8b06538",
+    "name": "Family member, adult"
+}

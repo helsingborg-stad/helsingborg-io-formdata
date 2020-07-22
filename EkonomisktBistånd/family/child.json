@@ -1,0 +1,62 @@
+{
+    "updatedAt": 1594812036649,
+    "createdAt": 1594812036649,
+    "steps": [
+        {
+            "icon": "ICON_TELL",
+            "show": true,
+            "questions": [
+                {
+                    "description": "first name",
+                    "label": "Förnamn",
+                    "id": "firstName",
+                    "type": "text"
+                },
+                {
+                    "description": "last name",
+                    "label": "Efternamn",
+                    "id": "lastName",
+                    "type": "text"
+                },
+                {
+                    "description": "personal number",
+                    "label": "Personnummer",
+                    "id": "personalNumber",
+                    "type": "number"
+                },
+                {
+                    "description": "living",
+                    "label": "Boende",
+                    "id": "living",
+                    "type": "text"
+                }
+            ],
+            "description": "Information om barn som bor hos dig",
+            "theme": {
+                "step": {
+                    "bg": "#FFAA9B",
+                    "text": {
+                        "colors": {
+                            "secondary": "#733232",
+                            "primary": "#00213F"
+                        }
+                    }
+                }
+            },
+            "id": "barn-info",
+            "title": "Familjemedlem, barn",
+            "actions": [
+                {
+                    "type": "submit",
+                    "label": "Klar"
+                }
+            ],
+            "group": "Familj"
+        }
+    ],
+    "provider": "familj",
+    "PK": "FORM#34c8e190-c68d-11ea-9984-cbb2e8b06538",
+    "description": "Information about child",
+    "id": "34c8e190-c68d-11ea-9984-cbb2e8b06538",
+    "name": "Family member, child"
+}
