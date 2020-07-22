@@ -1,0 +1,562 @@
+{
+    "updatedAt": 1595198339266,
+    "createdAt": 1595198339266,
+    "steps": [
+        {
+            "footerBG": "#FFAA9B",
+            "show": true,
+            "questions": [],
+            "banner": {
+                "iconSrc": "ICON_EKB"
+            },
+            "description": "Du kommer behöva ange inkomster, utgifter och kontrollera din personliga information.",
+            "theme": {
+                "step": {
+                    "bg": "#FFAA9B",
+                    "text": {
+                        "colors": {
+                            "secondary": "#733232",
+                            "primary": "#00213F"
+                        }
+                    }
+                }
+            },
+            "id": "295c3690-c02a-11ea-a2ba-bf7955a9d6e5",
+            "title": "Vill du ansöka om ekonomiskt bistånd igen?",
+            "actions": [
+                {
+                    "type": "start",
+                    "color": "blue",
+                    "label": "Ja, jag är redo"
+                },
+                {
+                    "type": "close",
+                    "color": "orange",
+                    "label": "Nej, jag väntar"
+                }
+            ],
+            "group": "Ansökan"
+        },
+        {
+            "show": true,
+            "questions": [
+                {
+                    "inputs": [
+                        {
+                            "type": "text",
+                            "key": "address",
+                            "label": "Adress"
+                        },
+                        {
+                            "type": "text",
+                            "key": "homeSize",
+                            "label": "Storlek"
+                        },
+                        {
+                            "type": "text",
+                            "key": "landlord",
+                            "label": "Hyresvärd"
+                        },
+                        {
+                            "type": "text",
+                            "key": "contract",
+                            "label": "Kontrakt"
+                        },
+                        {
+                            "type": "text",
+                            "key": "key-5",
+                            "label": "Hyra/ Avgift"
+                        }
+                    ],
+                    "show": true,
+                    "description": "Housing info of the person",
+                    "label": "",
+                    "id": "housingInfo",
+                    "type": "editableList",
+                    "title": "Boende"
+                },
+                {
+                    "inputs": [
+                        {
+                            "type": "text",
+                            "key": "email",
+                            "label": "Epost"
+                        },
+                        {
+                            "type": "text",
+                            "key": "telephone",
+                            "label": "Telefon"
+                        },
+                        {
+                            "type": "text",
+                            "key": "citizenship",
+                            "label": "Medborgarskap"
+                        },
+                        {
+                            "type": "text",
+                            "key": "employment",
+                            "label": "Sysselsättning"
+                        }
+                    ],
+                    "show": true,
+                    "description": "Personal info",
+                    "label": "",
+                    "id": "personalInfo",
+                    "type": "editableList",
+                    "title": "Mina uppgifter"
+                },
+                {
+                    "show": true,
+                    "description": "Grouplist to be implemented",
+                    "label": "Familj/ Personer jag delar boende med",
+                    "labelLine": true,
+                    "id": "675d28a0-c048-11ea-97ad-578a5bea0abc",
+                    "text": "Family to be implemented",
+                    "type": "button"
+                },
+                {
+                    "color": "blue",
+                    "iconName": "arrow-forward",
+                    "show": true,
+                    "description": "Button to update family members",
+                    "label": "",
+                    "text": "Hantera familj",
+                    "id": "e11e6120-c02c-11ea-a11a-97ddca6bc4d0",
+                    "type": "button"
+                }
+            ],
+            "banner": {
+                "iconSrc": "ICON_SUMMARY"
+            },
+            "description": "Först börjar vi med att bekräfta dina uppgifter. \n\nStämmer det här?",
+            "theme": {
+                "step": {
+                    "bg": "#FFAA9B",
+                    "text": {
+                        "colors": {
+                            "secondary": "#733232",
+                            "primary": "#00213F"
+                        }
+                    }
+                }
+            },
+            "id": "personalInfoStep",
+            "title": "Hej #firstName !",
+            "actions": [
+                {
+                    "type": "next",
+                    "color": "green",
+                    "label": "Ja, allt stämmer"
+                }
+            ],
+            "group": "Ekonomiskt bistånd"
+        },
+        {
+            "footerBG": "#00213F",
+            "show": true,
+            "questions": [
+                {
+                    "color": "light",
+                    "show": true,
+                    "description": "No monthly income",
+                    "label": "",
+                    "text": "Jag har ingen inkomst den här månaden.",
+                    "id": "noIncomeThisMonth",
+                    "type": "checkbox"
+                },
+                {
+                    "formId": "e366f250-c5a2-11ea-9e21-b7b32d0793c5",
+                    "color": "green",
+                    "show": true,
+                    "description": "Add details for monthly income",
+                    "label": "Lägg till ",
+                    "labelLine": true,
+                    "text": "Lön",
+                    "id": "amount",
+                    "type": "substepButton"
+                },
+                {
+                    "color": "light",
+                    "show": true,
+                    "description": "Getting benefits",
+                    "label": "",
+                    "text": "Jag får bidrag från myndigheter \nså som bostadbidrag, \nbarnbidrag, aktivitetsstöd, \na-kassa eller pension",
+                    "id": "receivingBenefits",
+                    "type": "checkbox"
+                },
+                {
+                    "color": "light",
+                    "show": true,
+                    "description": "Partner is getting benefits",
+                    "label": "",
+                    "text": "[Medsökande] får bidrag från \nmyndigheter så som \nbostadsbidrag, barnbidrag, \naktivitetsstöd, a-kassa eller \npension",
+                    "id": "coapplicationReceivingBenefits",
+                    "type": "checkbox"
+                }
+            ],
+            "banner": {
+                "backgroundColor": "#75C9A8",
+                "imageSrc": "ILLU_INCOME",
+                "iconSrc": "ICON_INCOME"
+            },
+            "description": "Till exampel lön, pengar du lånat, pengar du fått via Swish eller pension från utlandet.\n\nOm du bara har inkomster från myndigheter, till exempel bostadsbiddrag, barnbiddrag, aktivitetsstöd eller pension väljer du 'Jag har inga inkomster...' ",
+            "theme": {
+                "step": {
+                    "bg": "#FBF7F0",
+                    "text": {
+                        "colors": {
+                            "secondary": "#00213F",
+                            "primary": "#00213F"
+                        }
+                    }
+                }
+            },
+            "id": "incomeStep",
+            "title": "Inkomster",
+            "actions": [
+                {
+                    "type": "next",
+                    "color": "green",
+                    "label": "Nästa"
+                },
+                {
+                    "type": "close",
+                    "color": "blue",
+                    "label": "Spara, fortsätt senare"
+                }
+            ],
+            "group": "  "
+        },
+        {
+            "show": true,
+            "questions": [],
+            "banner": {
+                "backgroundColor": "#75C9A8",
+                "imageSrc": "ILLU_EXPENSES",
+                "iconSrc": "ICON_EXPENSES"
+            },
+            "description": "Nästa steg är att lämna och \nkontrollera dina tillgånger för \nperioden",
+            "theme": {
+                "step": {
+                    "bg": "#FBF7F0",
+                    "text": {
+                        "colors": {
+                            "secondary": "#00213F",
+                            "primary": "#00213F"
+                        }
+                    }
+                }
+            },
+            "id": "89da9c10-c119-11ea-936f-c314d5d1wer",
+            "title": "Tillgånger",
+            "actions": [
+                {
+                    "type": "next",
+                    "color": "green",
+                    "label": "Fortsätt"
+                },
+                {
+                    "type": "close",
+                    "color": "blue",
+                    "label": "Fortsätt senare"
+                }
+            ],
+            "group": " "
+        },
+        {
+            "show": true,
+            "questions": [
+                {
+                    "color": "light",
+                    "show": true,
+                    "description": "Inga tillgånger",
+                    "label": "",
+                    "text": "Jag har inga tillgånger.",
+                    "id": "6f080c10-c10f-f4s5-943a-314f30fd5230",
+                    "type": "checkbox"
+                },
+                {
+                    "color": "green",
+                    "show": true,
+                    "description": "Inga tillgånger",
+                    "label": "Lägg till tillgång",
+                    "text": "Implement Step button",
+                    "id": "6f080c10-0fb5-f4s5-943a-314f30fd5230",
+                    "type": "button"
+                }
+            ],
+            "banner": {
+                "backgroundColor": "#75C9A8",
+                "imageSrc": "ILLU_EXPENSES",
+                "iconSrc": "ICON_EXPENSES"
+            },
+            "description": "Kan till exampel \nvara bil, motorcykel, fastighet \neller något annat som har \nett ekonomiskt värde.",
+            "theme": {
+                "step": {
+                    "bg": "#FBF7F0",
+                    "text": {
+                        "colors": {
+                            "secondary": "#00213F",
+                            "primary": "#00213F"
+                        }
+                    }
+                }
+            },
+            "id": "89da9c10-c119-11ea-32e4-c314d5d10u8t",
+            "title": "Har du några tillgånger?",
+            "actions": [
+                {
+                    "type": "next",
+                    "color": "green",
+                    "label": "Nästa"
+                },
+                {
+                    "type": "close",
+                    "color": "blue",
+                    "label": "Spara och fortsätt senare"
+                }
+            ],
+            "group": "Tillgånger "
+        },
+        {
+            "show": true,
+            "questions": [],
+            "banner": {
+                "backgroundColor": "#FBF7F0",
+                "imageSrc": "ILLU_EXPENSES",
+                "iconSrc": "ICON_EXPENSES"
+            },
+            "description": "Nästa steg är att lämna och \nkontrollera det ni betalar för \ni perioden",
+            "theme": {
+                "step": {
+                    "bg": "#75C9A8",
+                    "text": {
+                        "colors": {
+                            "secondary": "#00213F",
+                            "primary": "#00213F"
+                        }
+                    }
+                }
+            },
+            "id": "89da9c10-c119-45tg-32e4-c314d5d10u8t",
+            "title": "Utgifter",
+            "actions": [
+                {
+                    "type": "next",
+                    "color": "green",
+                    "label": "Okej"
+                },
+                {
+                    "type": "close",
+                    "color": "blue",
+                    "label": "Fortsätt senare"
+                }
+            ],
+            "group": "Utgifter"
+        },
+        {
+            "show": true,
+            "questions": [
+                {
+                    "color": "white",
+                    "show": true,
+                    "description": "Inga kostnader",
+                    "label": "Boendekostnader",
+                    "text": "Implement Step button",
+                    "id": "6f080c10-r5te-sf4w-943a-314f30fd5230",
+                    "type": "button"
+                }
+            ],
+            "banner": {
+                "backgroundColor": "#FBF7F0",
+                "imageSrc": "ILLU_EXPENSES",
+                "iconSrc": "ICON_EXPENSES"
+            },
+            "description": "Här är de utgifter som du brukar \nsöka för. Du kan ta bort de som inte \nstämmer och ändra summan om det \nbehövs. Du kan också lägga till \nändra utgifter som du vill söka bidrag för",
+            "theme": {
+                "step": {
+                    "bg": "#75C9A8",
+                    "text": {
+                        "colors": {
+                            "secondary": "#00213F",
+                            "primary": "#00213F"
+                        }
+                    }
+                }
+            },
+            "id": "89da9c10-c119-45tg-32e4-c314d5d10u8t",
+            "title": "Vilka utgifter har du \nden här perioden?",
+            "actions": [
+                {
+                    "type": "next",
+                    "color": "green",
+                    "label": "Jag är färdig"
+                },
+                {
+                    "type": "close",
+                    "color": "blue",
+                    "label": "Spara, fortsätt senare"
+                }
+            ],
+            "group": "Utgifter"
+        },
+        {
+            "show": true,
+            "questions": [
+                {
+                    "color": "gray",
+                    "show": true,
+                    "description": "Message",
+                    "label": "",
+                    "text": "Ja",
+                    "id": "6f080c10-c10f-11ea-943a-314f30fd5230",
+                    "type": "checkbox"
+                },
+                {
+                    "color": "gray",
+                    "show": true,
+                    "description": "Message",
+                    "label": "",
+                    "text": "Nej",
+                    "id": "6f080c10-f4k6-11ea-943a-314f30fd5230",
+                    "type": "checkbox"
+                },
+                {
+                    "color": "green",
+                    "show": true,
+                    "description": "Add details ",
+                    "label": "Vill do lämna ett meddelande till oss?",
+                    "labelLine": true,
+                    "text": "Message input box",
+                    "id": "badb8400-c10f-11ea-943a-314f34ft3230",
+                    "type": "button"
+                }
+            ],
+            "banner": {
+                "iconSrc": "ICON_TELL"
+            },
+            "description": "Har du några kommande utgifter du behöver söka bistånd för?",
+            "theme": {
+                "step": {
+                    "bg": "#FFAA9B",
+                    "text": {
+                        "colors": {
+                            "secondary": "#00213F",
+                            "primary": "#00213F"
+                        }
+                    }
+                }
+            },
+            "id": "89da9c10-c119-11ea-936f-c314d5d1e0eb",
+            "title": "Är det något du vill att vi ska veta?",
+            "actions": [
+                {
+                    "type": "next",
+                    "color": "green",
+                    "label": "Fortsätt"
+                }
+            ],
+            "group": "Message"
+        },
+        {
+            "show": true,
+            "questions": [
+                {
+                    "color": "white",
+                    "show": true,
+                    "description": "Inga kostnader",
+                    "label": " ",
+                    "text": "Implement component",
+                    "id": "6f080c10-r5te-sf4w-943a-314f30fd5fra",
+                    "type": "button"
+                },
+                {
+                    "color": "gray",
+                    "show": true,
+                    "description": "Condition apply",
+                    "label": "",
+                    "text": "Jag godkänner att ni hantera \nmina personuppgifter och \n Uppgifter jag lämnat är \nsanningsenliga",
+                    "id": "6f080c10-f4k6-11ea-943a-314f30fd5230",
+                    "type": "checkbox"
+                }
+            ],
+            "banner": {
+                "iconSrc": "ICON_SUMMARY"
+            },
+            "description": "Nu är vi färdiga. Ser allt ut att stämma är det bara att skicka in din ansökan.",
+            "theme": {
+                "step": {
+                    "bg": "#FFAA9B",
+                    "text": {
+                        "colors": {
+                            "secondary": "#733232",
+                            "primary": "#00213F"
+                        }
+                    }
+                }
+            },
+            "id": "c6c59000-c059-11ea-af56-7b95f6172329",
+            "title": "Sammanställning",
+            "actions": [
+                {
+                    "type": "next",
+                    "color": "green",
+                    "label": "Ja, allt stämmer"
+                }
+            ],
+            "group": "Ekonomist bistånd"
+        },
+        {
+            "show": true,
+            "questions": [
+                {
+                    "color": "white",
+                    "show": true,
+                    "description": "Inga kostnader",
+                    "label": " ",
+                    "text": "Implement group avater ",
+                    "id": "6f080c10-r5te-sf4w-943a-314dsadd5fra",
+                    "type": "button"
+                },
+                {
+                    "color": "white",
+                    "show": true,
+                    "description": "Inga kostnader",
+                    "label": " ",
+                    "text": "Implement component  ",
+                    "id": "6f080c10-r5te-e34w-943a-31we4sadd5fra",
+                    "type": "button"
+                }
+            ],
+            "banner": {
+                "iconSrc": "ICON_DONE "
+            },
+            "description": "Jag har nu tagit emot din ansökan \noch kommer att igenom den. \nJag hör av mig med besked inom \n10 dagar. \n\nOm du är i akut behov av pengar, \neller har några frågor, kan du ringa \nmig eller min kollega.",
+            "theme": {
+                "step": {
+                    "bg": "#FFAA9B",
+                    "text": {
+                        "colors": {
+                            "secondary": "#733232",
+                            "primary": "#00213F"
+                        }
+                    }
+                }
+            },
+            "id": "c6c59000-c059-11ea-af56-7b95f6fe4w29",
+            "title": "Tack för din ansökan!",
+            "actions": [
+                {
+                    "type": "submit",
+                    "color": "green",
+                    "label": "Ja, Jag är redo"
+                }
+            ],
+            "group": "Ekonomist bistånd"
+        }
+    ],
+    "PK": "FORM#a3165a20-ca10-11ea-a07a-7f5f78324df2",
+    "description": "Ekonomiskt bistånd, löpande ansökan",
+    "id": "a3165a20-ca10-11ea-a07a-7f5f78324df2",
+    "name": "Ekonomiskt bistånd, löpande"
+}
