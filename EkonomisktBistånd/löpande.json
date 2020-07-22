@@ -229,50 +229,14 @@
         },
         {
             "show": true,
-            "questions": [],
-            "banner": {
-                "backgroundColor": "#75C9A8",
-                "imageSrc": "ILLU_EXPENSES",
-                "iconSrc": "ICON_EXPENSES"
-            },
-            "description": "Nästa steg är att lämna och \nkontrollera dina tillgånger för \nperioden",
-            "theme": {
-                "step": {
-                    "bg": "#FBF7F0",
-                    "text": {
-                        "colors": {
-                            "secondary": "#00213F",
-                            "primary": "#00213F"
-                        }
-                    }
-                }
-            },
-            "id": "89da9c10-c119-11ea-936f-c314d5d1wer",
-            "title": "Tillgånger",
-            "actions": [
-                {
-                    "type": "next",
-                    "color": "green",
-                    "label": "Fortsätt"
-                },
-                {
-                    "type": "close",
-                    "color": "blue",
-                    "label": "Fortsätt senare"
-                }
-            ],
-            "group": " "
-        },
-        {
-            "show": true,
             "questions": [
                 {
                     "color": "light",
                     "show": true,
-                    "description": "Inga tillgånger",
+                    "description": "Inga tillgångar",
                     "label": "",
-                    "text": "Jag har inga tillgånger.",
-                    "id": "6f080c10-c10f-f4s5-943a-314f30fd5230",
+                    "text": "Jag har inga tillgångar.",
+                    "id": "noAssets",
                     "type": "checkbox"
                 },
                 {
@@ -290,7 +254,7 @@
                 "imageSrc": "ILLU_EXPENSES",
                 "iconSrc": "ICON_EXPENSES"
             },
-            "description": "Kan till exampel \nvara bil, motorcykel, fastighet \neller något annat som har \nett ekonomiskt värde.",
+            "description": "Kan till exempel \nvara bil, motorcykel, fastighet \neller något annat som har \nett ekonomiskt värde.",
             "theme": {
                 "step": {
                     "bg": "#FBF7F0",
@@ -302,7 +266,7 @@
                     }
                 }
             },
-            "id": "89da9c10-c119-11ea-32e4-c314d5d10u8t",
+            "id": "assetsStep",
             "title": "Har du några tillgånger?",
             "actions": [
                 {
@@ -316,43 +280,7 @@
                     "label": "Spara och fortsätt senare"
                 }
             ],
-            "group": "Tillgånger "
-        },
-        {
-            "show": true,
-            "questions": [],
-            "banner": {
-                "backgroundColor": "#FBF7F0",
-                "imageSrc": "ILLU_EXPENSES",
-                "iconSrc": "ICON_EXPENSES"
-            },
-            "description": "Nästa steg är att lämna och \nkontrollera det ni betalar för \ni perioden",
-            "theme": {
-                "step": {
-                    "bg": "#75C9A8",
-                    "text": {
-                        "colors": {
-                            "secondary": "#00213F",
-                            "primary": "#00213F"
-                        }
-                    }
-                }
-            },
-            "id": "89da9c10-c119-45tg-32e4-c314d5d10u8t",
-            "title": "Utgifter",
-            "actions": [
-                {
-                    "type": "next",
-                    "color": "green",
-                    "label": "Okej"
-                },
-                {
-                    "type": "close",
-                    "color": "blue",
-                    "label": "Fortsätt senare"
-                }
-            ],
-            "group": "Utgifter"
+            "group": "Tillgångar"
         },
         {
             "show": true,
@@ -363,7 +291,7 @@
                     "description": "Inga kostnader",
                     "label": "Boendekostnader",
                     "text": "Implement Step button",
-                    "id": "6f080c10-r5te-sf4w-943a-314f30fd5230",
+                    "id": "expenses",
                     "type": "button"
                 }
             ],
@@ -372,7 +300,7 @@
                 "imageSrc": "ILLU_EXPENSES",
                 "iconSrc": "ICON_EXPENSES"
             },
-            "description": "Här är de utgifter som du brukar \nsöka för. Du kan ta bort de som inte \nstämmer och ändra summan om det \nbehövs. Du kan också lägga till \nändra utgifter som du vill söka bidrag för",
+            "description": "Här är de utgifter som du brukar \nsöka för. Du kan ta bort de som inte \nstämmer och ändra summan om det \nbehövs. Du kan också lägga till och ändra utgifter som du vill söka bidrag för.",
             "theme": {
                 "step": {
                     "bg": "#75C9A8",
@@ -384,7 +312,7 @@
                     }
                 }
             },
-            "id": "89da9c10-c119-45tg-32e4-c314d5d10u8t",
+            "id": "expensesStep",
             "title": "Vilka utgifter har du \nden här perioden?",
             "actions": [
                 {
@@ -409,23 +337,23 @@
                     "description": "Message",
                     "label": "",
                     "text": "Ja",
-                    "id": "6f080c10-c10f-11ea-943a-314f30fd5230",
+                    "id": "message",
                     "type": "checkbox"
                 },
                 {
                     "color": "gray",
                     "show": true,
-                    "description": "Message",
+                    "description": "No message",
                     "label": "",
                     "text": "Nej",
-                    "id": "6f080c10-f4k6-11ea-943a-314f30fd5230",
+                    "id": "noMessage",
                     "type": "checkbox"
                 },
                 {
                     "color": "green",
                     "show": true,
                     "description": "Add details ",
-                    "label": "Vill do lämna ett meddelande till oss?",
+                    "label": "Lämna ett meddelande:",
                     "labelLine": true,
                     "text": "Message input box",
                     "id": "badb8400-c10f-11ea-943a-314f34ft3230",
@@ -435,7 +363,7 @@
             "banner": {
                 "iconSrc": "ICON_TELL"
             },
-            "description": "Har du några kommande utgifter du behöver söka bistånd för?",
+            "description": "",
             "theme": {
                 "step": {
                     "bg": "#FFAA9B",
@@ -447,8 +375,8 @@
                     }
                 }
             },
-            "id": "89da9c10-c119-11ea-936f-c314d5d1e0eb",
-            "title": "Är det något du vill att vi ska veta?",
+            "id": "extraMessageStep",
+            "title": "Är det något annat du vill att vi ska veta?",
             "actions": [
                 {
                     "type": "next",
@@ -456,7 +384,7 @@
                     "label": "Fortsätt"
                 }
             ],
-            "group": "Message"
+            "group": "Övrigt"
         },
         {
             "show": true,
@@ -473,10 +401,10 @@
                 {
                     "color": "gray",
                     "show": true,
-                    "description": "Condition apply",
+                    "description": "Agree to terms and conditions",
                     "label": "",
-                    "text": "Jag godkänner att ni hantera \nmina personuppgifter och \n Uppgifter jag lämnat är \nsanningsenliga",
-                    "id": "6f080c10-f4k6-11ea-943a-314f30fd5230",
+                    "text": "Jag godkänner att ni hanterar mina personuppgifter och intygar att uppgifterna jag lämnat är sanningsenliga",
+                    "id": "agreeToTerms",
                     "type": "checkbox"
                 }
             ],
@@ -504,7 +432,7 @@
                     "label": "Ja, allt stämmer"
                 }
             ],
-            "group": "Ekonomist bistånd"
+            "group": "Ekonomiskt bistånd"
         },
         {
             "show": true,
@@ -531,7 +459,7 @@
             "banner": {
                 "iconSrc": "ICON_DONE "
             },
-            "description": "Jag har nu tagit emot din ansökan \noch kommer att igenom den. \nJag hör av mig med besked inom \n10 dagar. \n\nOm du är i akut behov av pengar, \neller har några frågor, kan du ringa \nmig eller min kollega.",
+            "description": "Vi har nu tagit emot din ansökan \noch kommer att igenom den. \nVi hör av mig med besked inom \n10 dagar. \n\nOm du är i akut behov av pengar, \neller har några frågor, kan du ringa \nmig eller min kollega.",
             "theme": {
                 "step": {
                     "bg": "#FFAA9B",
@@ -543,16 +471,16 @@
                     }
                 }
             },
-            "id": "c6c59000-c059-11ea-af56-7b95f6fe4w29",
+            "id": "sentInStep",
             "title": "Tack för din ansökan!",
             "actions": [
                 {
                     "type": "submit",
                     "color": "green",
-                    "label": "Ja, Jag är redo"
+                    "label": "Avsluta"
                 }
             ],
-            "group": "Ekonomist bistånd"
+            "group": "Ekonomiskt bistånd"
         }
     ],
     "PK": "FORM#a3165a20-ca10-11ea-a07a-7f5f78324df2",
