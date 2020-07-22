@@ -1,0 +1,48 @@
+{
+    "id": "dca2d5a0-cc15-11ea-b328-f92da3041fee",
+    "PK": "FORM#dca2d5a0-cc15-11ea-b328-f92da3041fee",
+    "provider": "",
+    "description": "Subform for inputing your partners salary",
+    "name": "Partner Salary substep",
+    "steps": [
+        {
+            "banner": {
+                "backgroundColor": "#75C9A8",
+                "imageSrc": "ILLU_INCOME",
+                "iconSrc": "ICON_INCOME"
+            },
+            "show": true,
+            "questions": [
+                {
+                    "show": true,
+                    "description": "Salary input",
+                    "label": "Partners lön",
+                    "id": "amount",
+                    "type": "number",
+                    "title": "Partners lön"
+                }
+            ],
+            "description": "Ange din medsökandes lön",
+            "theme": {
+                "step": {
+                    "bg": "#FFAA9B",
+                    "text": {
+                        "colors": {
+                            "secondary": "#733232",
+                            "primary": "#00213F"
+                        }
+                    }
+                }
+            },
+            "id": "partner salary_step",
+            "title": "Partners lön",
+            "actions": [
+                {
+                    "type": "submit",
+                    "label": "Klar"
+                }
+            ],
+            "group": "Inkomst"
+        }
+    ]
+}

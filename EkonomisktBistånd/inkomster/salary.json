@@ -1,0 +1,50 @@
+{
+    "provider": "",
+    "PK": "FORM#e366f250-c5a2-11ea-9e21-b7b32d0793c5",
+    "description": "Subform for inputing salary",
+    "id": "e366f250-c5a2-11ea-9e21-b7b32d0793c5",
+    "name": "Salary substep",
+    "updatedAt": 1594711397877,
+    "createdAt": 1594711397877,
+    "steps": [
+        {
+            "banner": {
+                "backgroundColor": "#75C9A8",
+                "imageSrc": "ILLU_INCOME",
+                "iconSrc": "ICON_INCOME"
+            },
+            "show": true,
+            "questions": [
+                {
+                    "show": true,
+                    "description": "Salary input",
+                    "label": "Lön",
+                    "id": "amount",
+                    "type": "number",
+                    "title": "Lön"
+                }
+            ],
+            "description": "Ange din lön",
+            "theme": {
+                "step": {
+                    "bg": "#FFAA9B",
+                    "text": {
+                        "colors": {
+                            "secondary": "#733232",
+                            "primary": "#00213F"
+                        }
+                    }
+                }
+            },
+            "id": "salary_step",
+            "title": "Lön",
+            "actions": [
+                {
+                    "type": "submit",
+                    "label": "Klar"
+                }
+            ],
+            "group": "Inkomst"
+        }
+    ]
+}
