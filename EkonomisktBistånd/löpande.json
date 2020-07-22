@@ -411,60 +411,40 @@
         {
             "show": true,
             "questions": [
-                {
-                    "color": "gray",
-                    "show": true,
-                    "description": "Message",
-                    "label": "",
-                    "text": "Ja",
-                    "id": "message",
-                    "type": "checkbox"
-                },
-                {
-                    "color": "gray",
-                    "show": true,
-                    "description": "No message",
-                    "label": "",
-                    "text": "Nej",
-                    "id": "noMessage",
-                    "type": "checkbox"
-                },
-                {
-                    "color": "green",
-                    "show": true,
-                    "description": "Add details ",
-                    "label": "Lämna ett meddelande:",
-                    "labelLine": true,
-                    "text": "Message input box",
-                    "id": "badb8400-c10f-11ea-943a-314f34ft3230",
-                    "type": "button"
-                }
+              {
+                "color": "light",
+                "show": true,
+                "checkboxDisableText": "Nej",
+                "checkboxEnableText": "Ja",
+                "type": "conditionalTextField"
+              },
             ],
             "banner": {
-                "iconSrc": "ICON_TELL"
+              "iconSrc": "ICON_TELL",
             },
-            "description": "Om du vill meddela oss något ytterligare du tror är relevant för din ansökan, kan du göra det här.",
+            "description":
+              "Om du vill meddela oss något ytterligare du tror är relevant för din ansökan, kan du göra det här.",
             "theme": {
-                "step": {
-                    "bg": "#FFAA9B",
-                    "text": {
-                        "colors": {
-                            "secondary": "#00213F",
-                            "primary": "#00213F"
-                        }
-                    }
+              "step": {
+                "bg": "#FFAA9B",
+                "text": {
+                  "colors": {
+                    "secondary": "#00213F",
+                    "primary": "#00213F",
+                  }
                 }
+              }
             },
             "id": "extraMessageStep",
             "title": "Är det något annat du vill att vi ska veta?",
             "actions": [
-                {
-                    "type": "next",
-                    "color": "green",
-                    "label": "Fortsätt"
-                }
+              {
+                "type": "next",
+                "color": "green",
+                "label": "Fortsätt",
+              }
             ],
-            "group": "Övrigt"
+            "group": "Övrigt",
         },
         {
             "show": true,
