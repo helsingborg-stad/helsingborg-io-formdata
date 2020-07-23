@@ -1,0 +1,54 @@
+{
+    "provider": "",
+    "description": "Subform for inputing prescription medicine expenses",
+    "name": "Prescription medicine substep",
+    "id": "a8b50f10-ccb0-11ea-9971-f338806bfcc5",
+    "steps": [
+        {
+            "banner": {
+                "backgroundColor": "#75C9A8",
+                "iconSrc": "ICON_HEALTHCARE"
+            },
+            "show": true,
+            "questions": [
+                {
+                    "show": true,
+                    "description": "prescription medicine description",
+                    "label": "Beskrivning",
+                    "id": "description",
+                    "type": "text",
+                    "title": "Receptbelagd medicin beskrivning"
+                },
+                {
+                    "show": true,
+                    "description": "prescription medicine expense",
+                    "label": "Kostnad",
+                    "id": "amount",
+                    "type": "number",
+                    "title": "Receptbelagd medicin kostnad"
+                }
+            ],
+            "description": "Ange hur mycket du spenderat på receptbelagd medicin under perioden",
+            "theme": {
+                "step": {
+                    "bg": "#FFAA9B",
+                    "text": {
+                        "colors": {
+                            "secondary": "#733232",
+                            "primary": "#00213F"
+                        }
+                    }
+                }
+            },
+            "id": "prescription medicine step",
+            "title": "Receptbelagd medicin",
+            "actions": [
+                {
+                    "type": "submit",
+                    "label": "Klar"
+                }
+            ],
+            "group": "Utgift"
+        }
+    ]
+}

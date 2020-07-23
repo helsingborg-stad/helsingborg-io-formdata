@@ -63,8 +63,8 @@
                             "label": "Kontrakt"
                         },
                         {
-                            "type": "text",
-                            "key": "key-5",
+                            "type": "number",
+                            "key": "rent",
                             "label": "Hyra/ Avgift"
                         }
                     ],
@@ -346,12 +346,12 @@
                         {
                             "category":"living",
                             "title": "Hyra",
-                            "formId":"e366f250-c5a2-11ea-9e21-b7b32d0793c5"
+                            "formId":"f2b39e30-cc27-11ea-bde4-adf634411570"
                         },
                         {
                             "category":"living",
                             "title": "Elektricitet",
-                            "formId":"e366f250-c5a2-11ea-9e21-b7b32d0793c5"
+                            "formId":"53e3af10-cc28-11ea-bde4-adf634411570"
                         },
                         {
                             "category":"living",
@@ -366,7 +366,7 @@
                         {
                             "category":"medicine",
                             "title": "Receptbelagd medicin",
-                            "formId":"e366f250-c5a2-11ea-9e21-b7b32d0793c5"
+                            "formId":"a8b50f10-ccb0-11ea-9971-f338806bfcc5"
                         },
                         {
                             "category":"transport",
@@ -531,12 +531,12 @@
                         {
                             "category":"living",
                             "title": "Hyra",
-                            "formId":"e366f250-c5a2-11ea-9e21-b7b32d0793c5"
+                            "formId":"f2b39e30-cc27-11ea-bde4-adf634411570"
                         },
                         {
                             "category":"living",
                             "title": "Elektricitet",
-                            "formId":"e366f250-c5a2-11ea-9e21-b7b32d0793c5"
+                            "formId":"53e3af10-cc28-11ea-bde4-adf634411570"
                         },
                         {
                             "category":"living",
@@ -551,7 +551,7 @@
                         {
                             "category":"medicine",
                             "title": "Receptbelagd medicin",
-                            "formId":"e366f250-c5a2-11ea-9e21-b7b32d0793c5"
+                            "formId":"a8b50f10-ccb0-11ea-9971-f338806bfcc5"
                         },
                         {
                             "category":"transport",

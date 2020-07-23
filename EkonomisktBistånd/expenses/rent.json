@@ -1,0 +1,48 @@
+{
+    "provider": "",
+    "description": "Subform for inputing rent",
+    "name": "Rent substep",
+    "id": "f2b39e30-cc27-11ea-bde4-adf634411570",
+    "PK": "FORM#f2b39e30-cc27-11ea-bde4-adf634411570",
+    "steps": [
+        {
+            "banner": {
+                "backgroundColor": "#75C9A8",
+                "imageSrc": "ILLU_EXPENSES",
+                "iconSrc": "ICON_EXPENSES"
+            },
+            "show": true,
+            "questions": [
+                {
+                    "show": true,
+                    "description": "rent input",
+                    "label": "Hyra/avgift",
+                    "id": "amount",
+                    "type": "number",
+                    "title": "Hyra/avgift"
+                }
+            ],
+            "description": "Ange din hyra/avgift för perioden",
+            "theme": {
+                "step": {
+                    "bg": "#FFAA9B",
+                    "text": {
+                        "colors": {
+                            "secondary": "#733232",
+                            "primary": "#00213F"
+                        }
+                    }
+                }
+            },
+            "id": "rent step",
+            "title": "Hyra",
+            "actions": [
+                {
+                    "type": "submit",
+                    "label": "Klar"
+                }
+            ],
+            "group": "Utgift"
+        }
+    ]
+}

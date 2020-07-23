@@ -17,28 +17,29 @@
                     "type": "text"
                 },
                 {
-                    "description": "personal number",
-                    "label": "Personnummer",
-                    "id": "personalNumber",
-                    "type": "number"
-                },
-                {
-                    "description": "telephone number",
-                    "label": "Telefon",
-                    "id": "telephone",
-                    "type": "number"
-                },
-                {
-                    "description": "email",
-                    "label": "Email",
-                    "id": "email",
-                    "type": "text"
-                },
-                {
-                    "description": "living situation",
-                    "label": "Boende",
-                    "id": "living",
-                    "type": "text"
+                    "inputs": [
+                        {
+                            "type": "number",
+                            "key": "personalNumber",
+                            "label": "PNR"
+                        },
+                        {
+                            "type": "number",
+                            "key": "telephone",
+                            "label": "Telefon"
+                        },
+                        {
+                            "type": "text",
+                            "key": "email",
+                            "label": "Email"
+                        }
+                    ],
+                    "show": true,
+                    "description": "Personal info about the family member",
+                    "label": "",
+                    "id": "personalInfo",
+                    "type": "editableList",
+                    "title": "Uppgifter"
                 }
             ],
             "icon": "ICON_TELL",
