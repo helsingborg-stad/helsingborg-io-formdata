@@ -15,11 +15,20 @@
             "questions": [
                 {
                     "show": true,
+                    "description": "rent date input",
+                    "label": "Datum",
+                    "id": "date",
+                    "type": "date",
+                    "title": "Datum"
+                },
+                {
+                    "show": true,
                     "description": "rent input",
                     "label": "Hyra/avgift",
                     "id": "amount",
                     "type": "number",
-                    "title": "Hyra/avgift"
+                    "title": "Hyra/avgift",
+                    "center":"true"
                 }
             ],
             "description": "Ange din hyra/avgift för perioden",

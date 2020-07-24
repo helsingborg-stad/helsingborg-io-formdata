@@ -591,7 +591,8 @@
                 {
                     "type": "next",
                     "color": "green",
-                    "label": "Ja, allt stämmer"
+                    "label": "Ja, allt stämmer",
+                    "conditionalOn": "agreeToTerms"
                 }
             ],
             "group": "Ekonomiskt bistånd"
