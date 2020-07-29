@@ -597,9 +597,9 @@
       "title": "Sammanställning",
       "actions": [
         {
-          "type": "next",
+          "type": "bankIdSign",
           "color": "green",
-          "label": "Ja, allt stämmer",
+          "label": "Signera med BankID",
           "conditionalOn": "agreeToTerms"
         }
       ],
