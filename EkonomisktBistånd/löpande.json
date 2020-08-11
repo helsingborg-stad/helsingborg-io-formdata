@@ -171,8 +171,10 @@
         {
           "show": true,
           "description": "incomes",
+          "color":"light",
           "label": "",
           "id": "incomes",
+          "conditionalOn":"!noIncomeThisMonth",
           "type": "substepList",
           "heading": "Inkomster",
           "categories": {
@@ -275,8 +277,10 @@
         {
           "show": true,
           "description": "assets",
+          "color":"light",
           "label": "",
           "id": "assets",
+          "conditionalOn":"!noAssets",
           "type": "substepList",
           "heading": "Tillgångar",
           "categories": {
@@ -341,6 +345,7 @@
         {
           "show": true,
           "description": "expenses",
+          "color":"green",
           "label": "",
           "id": "expenses",
           "type": "substepList",
@@ -461,6 +466,7 @@
       "questions": [
         {
           "show": true,
+          "color": "red",
           "description": "incomes summary",
           "label": "",
           "id": "incomes",
@@ -496,6 +502,7 @@
         {
           "show": true,
           "description": "assets summary",
+          "color": "red",
           "label": "",
           "id": "assets",
           "type": "substepListSummary",
@@ -525,6 +532,7 @@
         {
           "show": true,
           "description": "expenses summary",
+          "color": "red",
           "label": "",
           "id": "expenses",
           "type": "substepListSummary",
@@ -607,26 +615,7 @@
     },
     {
       "show": true,
-      "questions": [
-        {
-          "color": "white",
-          "show": true,
-          "description": "Inga kostnader",
-          "label": " ",
-          "text": "Implement group avater ",
-          "id": "6f080c10-r5te-sf4w-943a-314dsadd5fra",
-          "type": "button"
-        },
-        {
-          "color": "white",
-          "show": true,
-          "description": "Inga kostnader",
-          "label": " ",
-          "text": "Implement component  ",
-          "id": "6f080c10-r5te-e34w-943a-31we4sadd5fra",
-          "type": "button"
-        }
-      ],
+      "questions": [ ],
       "banner": {
         "iconSrc": "ICON_DONE "
       },
