@@ -1,6 +1,7 @@
 {
-  "description": "Ekonomiskt bistånd, löpande ansökan",
   "name": "Ekonomiskt bistånd, löpande",
+  "description": "Ekonomiskt bistånd, löpande ansökan",
+  "provider": "VIVA",
   "steps": [
     {
       "footerBG": "#FFAA9B",
@@ -45,7 +46,12 @@
             {
               "type": "text",
               "key": "address",
-              "label": "Adress"
+              "label": "Gatuadress"
+            },
+            {
+              "type": "number",
+              "key": "postalCode",
+              "label": "Postnummer"
             },
             {
               "type": "text",
@@ -106,30 +112,30 @@
           "title": "Mina uppgifter"
         },
         {
+          "formId": "dc069a10-c68d-11ea-9984-cbb2e8b06538",
+          "heading": "VUXNA JAG DELAR BOENDE MED",
           "show": true,
           "description": "Other adults in the household",
           "label": "",
-          "heading": "VUXNA JAG DELAR BOENDE MED",
           "labelLine": true,
           "id": "family-adults",
-          "type": "avatarList",
-          "formId": "dc069a10-c68d-11ea-9984-cbb2e8b06538"
+          "type": "avatarList"
         },
         {
+          "formId": "34c8e190-c68d-11ea-9984-cbb2e8b06538",
+          "heading": "BARN JAG DELAR BOENDE MED",
           "show": true,
           "description": "Children in the household",
           "label": "",
           "labelLine": false,
-          "heading": "BARN JAG DELAR BOENDE MED",
           "id": "family-children",
-          "type": "avatarList",
-          "formId": "34c8e190-c68d-11ea-9984-cbb2e8b06538"
+          "type": "avatarList"
         }
       ],
       "banner": {
         "iconSrc": "ICON_SUMMARY"
       },
-      "description": "Först börjar vi med att bekräfta dina uppgifter. \n\nStämmer det här?",
+      "description": "Först börjar vi med att bekräfta dina uppgifter. \n\nStämmer det här? ",
       "theme": {
         "step": {
           "bg": "#FFAA9B",
@@ -159,28 +165,52 @@
         {
           "color": "light",
           "show": true,
+          "description": "Getting benefits",
+          "label": "",
+          "text": "Jag får bidrag från myndigheter \nså som bostadbidrag, \nbarnbidrag, aktivitetsstöd, \na-kassa eller pension",
+          "id": "receivingBenefits",
+          "type": "checkbox"
+        },
+        {
+          "color": "light",
+          "show": true,
+          "description": "Partner is getting benefits",
+          "label": "",
+          "text": "[Medsökande] får bidrag från \nmyndigheter så som \nbostadsbidrag, barnbidrag, \naktivitetsstöd, a-kassa eller \npension",
+          "id": "coapplicationReceivingBenefits",
+          "type": "checkbox"
+        },
+        {
+          "help": {
+            "url": "https://helsingborg.se/"
+          },
+          "color": "light",
+          "show": true,
           "description": "No monthly income",
           "label": "",
           "text": "Jag har ingen inkomst den här månaden.",
           "id": "noIncomeThisMonth",
-          "type": "checkbox",
-          "help": {
-            "url": "https://helsingborg.se/"
-          }
+          "type": "checkbox"
         },
         {
+          "conditionalOn": "!noIncomeThisMonth",
+          "color": "light",
+          "heading": "Inkomster",
           "show": true,
           "description": "incomes",
-          "color":"light",
           "label": "",
           "id": "incomes",
-          "conditionalOn":"!noIncomeThisMonth",
+          "categories": [
+            {
+              "category": "income",
+              "description": "Dina inkomster"
+            },
+            {
+              "category": "partnerIncome",
+              "description": "[Partner]s inkomster"
+            }
+          ],
           "type": "substepList",
-          "heading": "Inkomster",
-          "categories": {
-            "income": "Dina inkomster",
-            "partnerIncome": "[Partner]s inkomster"
-          },
           "items": [
             {
               "category": "income",
@@ -203,24 +233,6 @@
               "formId": "e366f250-c5a2-11ea-9e21-b7b32d0793c5"
             }
           ]
-        },
-        {
-          "color": "light",
-          "show": true,
-          "description": "Getting benefits",
-          "label": "",
-          "text": "Jag får bidrag från myndigheter \nså som bostadbidrag, \nbarnbidrag, aktivitetsstöd, \na-kassa eller pension",
-          "id": "receivingBenefits",
-          "type": "checkbox"
-        },
-        {
-          "color": "light",
-          "show": true,
-          "description": "Partner is getting benefits",
-          "label": "",
-          "text": "[Medsökande] får bidrag från \nmyndigheter så som \nbostadsbidrag, barnbidrag, \naktivitetsstöd, a-kassa eller \npension",
-          "id": "coapplicationReceivingBenefits",
-          "type": "checkbox"
         }
       ],
       "banner": {
@@ -260,33 +272,39 @@
       "show": true,
       "questions": [
         {
+          "help": {
+            "tagline": "Hjälp",
+            "text": "Om du söker första gången kommer du bli uppringd efter att du lämnat in din ansökan.\n\n Samtalet behövs för att vi ska kunna utreda rätten till bistånd.\nOm du söker första gången behöver du skicka underlag för boende, uppehållstillstånd och kontoöversikt.\n\nDu kan kontakta oss för rådgivning innan du ansöker.\n\nOm du söker första gången behöver du skicka underlag för boende, uppehållstillstånd och kontoöversikt.",
+            "heading": "Så här fungerar ekonomiskt bistånd",
+            "url": "https://helsingborg.se/"
+          },
           "color": "light",
           "show": true,
           "description": "Inga tillgångar",
           "label": "",
           "text": "Jag har inga tillgångar.",
           "id": "noAssets",
-          "type": "checkbox",
-          "help": {
-            "text": "Om du söker första gången kommer du bli uppringd efter att du lämnat in din ansökan.\n\n Samtalet behövs för att vi ska kunna utreda rätten till bistånd.\nOm du söker första gången behöver du skicka underlag för boende, uppehållstillstånd och kontoöversikt.\n\nDu kan kontakta oss för rådgivning innan du ansöker.\n\nOm du söker första gången behöver du skicka underlag för boende, uppehållstillstånd och kontoöversikt.",
-            "heading": "Så här fungerar ekonomiskt bistånd",
-            "tagline": "Hjälp",
-            "url": "https://helsingborg.se/"
-          }
+          "type": "checkbox"
         },
         {
+          "conditionalOn": "!noAssets",
+          "color": "light",
+          "heading": "Tillgångar",
           "show": true,
           "description": "assets",
-          "color":"light",
           "label": "",
           "id": "assets",
-          "conditionalOn":"!noAssets",
+          "categories": [
+            {
+              "category": "vehicles",
+              "description": "Fordon"
+            },
+            {
+              "category": "properties",
+              "description": "Fastigheter"
+            }
+          ],
           "type": "substepList",
-          "heading": "Tillgångar",
-          "categories": {
-            "vehicles": "Fordon",
-            "properties": "Fastigheter"
-          },
           "items": [
             {
               "category": "vehicles",
@@ -311,7 +329,7 @@
         "imageSrc": "ILLU_EXPENSES",
         "iconSrc": "ICON_EXPENSES"
       },
-      "description": "Kan till exempel \nvara bil, motorcykel, fastighet \neller något annat som har \nett ekonomiskt värde.",
+      "description": "Som till exempel en bil, motorcykel, fastighet eller något annat som har ett ekonomiskt värde.",
       "theme": {
         "step": {
           "bg": "#FBF7F0",
@@ -324,7 +342,7 @@
         }
       },
       "id": "assetsStep",
-      "title": "Har du några tillgånger?",
+      "title": "Har du några tillgångar?",
       "actions": [
         {
           "type": "next",
@@ -343,19 +361,31 @@
       "show": true,
       "questions": [
         {
+          "color": "green",
+          "heading": "Utgifter",
           "show": true,
           "description": "expenses",
-          "color":"green",
           "label": "",
           "id": "expenses",
+          "categories": [
+            {
+              "category": "living",
+              "description": "Boende"
+            },
+            {
+              "category": "medicine",
+              "description": "Medicin"
+            },
+            {
+              "category": "transport",
+              "description": "Transport"
+            },
+            {
+              "category": "other",
+              "description": "Övrigt"
+            }
+          ],
           "type": "substepList",
-          "heading": "Utgifter",
-          "categories": {
-            "living": "Boende",
-            "medicine": "Medicin",
-            "transport": "Transport",
-            "other": "Övrigt"
-          },
           "items": [
             {
               "category": "living",
@@ -427,11 +457,11 @@
       "show": true,
       "questions": [
         {
-          "id": "otherMessage",
-          "color": "light",
           "show": true,
           "checkboxDisableText": "Nej",
           "checkboxEnableText": "Ja",
+          "id": "otherMessage",
+          "color": "light",
           "type": "conditionalTextField"
         }
       ],
@@ -465,17 +495,23 @@
       "show": true,
       "questions": [
         {
-          "show": true,
           "color": "red",
+          "heading": "Inkomster",
+          "show": true,
           "description": "incomes summary",
           "label": "",
           "id": "incomes",
+          "categories": [
+            {
+              "category": "income",
+              "description": "Dina inkomster"
+            },
+            {
+              "category": "partnerIncome",
+              "description": "[Partner]s inkomster"
+            }
+          ],
           "type": "substepListSummary",
-          "heading": "Inkomster",
-          "categories": {
-            "income": "Dina inkomster",
-            "partnerIncome": "[Partner]s inkomster"
-          },
           "items": [
             {
               "category": "income",
@@ -500,17 +536,23 @@
           ]
         },
         {
+          "color": "red",
+          "heading": "Tillgångar",
           "show": true,
           "description": "assets summary",
-          "color": "red",
           "label": "",
           "id": "assets",
+          "categories": [
+            {
+              "category": "vehicles",
+              "description": "Fordon"
+            },
+            {
+              "category": "properties",
+              "description": "Fastigheter"
+            }
+          ],
           "type": "substepListSummary",
-          "heading": "Tillgångar",
-          "categories": {
-            "vehicles": "Fordon",
-            "properties": "Fastigheter"
-          },
           "items": [
             {
               "category": "vehicles",
@@ -530,19 +572,31 @@
           ]
         },
         {
+          "color": "red",
+          "heading": "Utgifter",
           "show": true,
           "description": "expenses summary",
-          "color": "red",
           "label": "",
           "id": "expenses",
+          "categories": [
+            {
+              "category": "living",
+              "description": "Boende"
+            },
+            {
+              "category": "medicine",
+              "description": "Medicin"
+            },
+            {
+              "category": "transport",
+              "description": "Transport"
+            },
+            {
+              "category": "other",
+              "description": "Övrigt"
+            }
+          ],
           "type": "substepListSummary",
-          "heading": "Utgifter",
-          "categories": {
-            "living": "Boende",
-            "medicine": "Medicin",
-            "transport": "Transport",
-            "other": "Övrigt"
-          },
           "items": [
             {
               "category": "living",
@@ -577,7 +631,7 @@
           ]
         },
         {
-          "color": "gray",
+          "color": "light",
           "show": true,
           "description": "Agree to terms and conditions",
           "label": "",
@@ -605,17 +659,17 @@
       "title": "Sammanställning",
       "actions": [
         {
-          "type": "bankIdSign",
-          "color": "green",
+          "conditionalOn": "agreeToTerms",
           "label": "Signera med BankID",
-          "conditionalOn": "agreeToTerms"
+          "type": "sign",
+          "color": "green"
         }
       ],
       "group": "Ekonomiskt bistånd"
     },
     {
       "show": true,
-      "questions": [ ],
+      "questions": [],
       "banner": {
         "iconSrc": "ICON_DONE "
       },
@@ -635,12 +689,14 @@
       "title": "Tack för din ansökan!",
       "actions": [
         {
-          "type": "submit",
+          "type": "close",
           "color": "green",
           "label": "Avsluta"
         }
       ],
       "group": "Ekonomiskt bistånd"
     }
-  ]
+  ],
+  "subform": false,
+  "id": "a3165a20-ca10-11ea-a07a-7f5f78324df2"
 }
